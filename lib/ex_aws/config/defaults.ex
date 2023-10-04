@@ -77,6 +77,11 @@ defmodule ExAws.Config.Defaults do
     |> Map.merge(defaults(:chime))
   end
 
+  def defaults(:bedrock_runtime) do
+    %{service_override: :bedrock}
+    |> Map.merge(defaults(:bedrock))
+  end
+
   def defaults(_) do
     Map.merge(
       %{
@@ -125,6 +130,8 @@ defmodule ExAws.Config.Defaults do
   defp service_map(:geofencing), do: "geofencing.geo"
   defp service_map(:tracking), do: "tracking.geo"
   defp service_map(:routes), do: "routes.geo"
+  defp service_map(:bedrock), do: "bedrock"
+  defp service_map(:bedrock_runtime), do: "bedrock-runtime"
 
   defp service_map(service) do
     service

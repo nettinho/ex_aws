@@ -2377,6 +2377,12 @@
             "us-west-1" => %{},
             "us-west-2" => %{}
           }
+        },
+        "bedrock" => %{
+          "endpoints" => %{ "us-east-1" => %{} }
+        },
+        "bedrock-runtime" => %{
+          "endpoints" => %{ "us-east-1" => %{} }
         }
       }
     },
